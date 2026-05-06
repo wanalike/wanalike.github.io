@@ -37,7 +37,6 @@ body {
 .noise-layer {
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(0px);
   pointer-events: none;
   z-index: -3;
 }
@@ -90,19 +89,30 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   color: white;
   font-weight: 800;
   font-size: 1.2rem;
 }
 
-.brand-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, var(--primary), var(--secondary));
-  box-shadow: 0 0 20px rgba(124,92,255,.7);
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(0,162,255,.35));
+}
+
+.footer-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .nav-links {
@@ -374,7 +384,8 @@ body {
 
 @media (max-width: 900px) {
   .navbar,
-  .site-footer {
+  .site-footer,
+  .footer-brand {
     flex-direction: column;
     text-align: center;
   }
