@@ -2,7 +2,12 @@ const routes = {
   home: `
     <section class="hero hero-home">
       <div class="hero-copy fade-in">
-        <span class="eyebrow">HUB • APPS • INFRA • API</span>
+        <div class="hero-logo-mark">
+          <img src="assets/img/logo-wanalike.svg" alt="WanaLike logo" />
+          <span>Creative Tech Ecosystem</span>
+        </div>
+
+        <span class="eyebrow"><i class="fa-solid fa-network-wired"></i> HUB • APPS • INFRA • API</span>
 
         <h1>
           Le hub central de <span>l’écosystème WanaLike.</span>
@@ -15,51 +20,57 @@ const routes = {
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#projects">Explorer l’écosystème</a>
-          <a class="btn secondary" href="https://github.com/wanalike" target="_blank">GitHub</a>
+          <a class="btn primary" href="#projects"><i class="fa-solid fa-rocket"></i> Explorer l’écosystème</a>
+          <a class="btn secondary" href="https://github.com/wanalike" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
         </div>
       </div>
 
       <aside class="hero-panel fade-in">
+        <div class="hero-orbit-logo">
+          <img src="assets/img/logo-wanalike.svg" alt="WanaLike logo" />
+          <div class="orbit-ring ring-one"></div>
+          <div class="orbit-ring ring-two"></div>
+        </div>
+
         <div class="panel-line">
-          <span>Architecture cible</span>
+          <span><i class="fa-solid fa-sitemap"></i> Architecture cible</span>
           <strong>Un portail public, plusieurs produits autonomes.</strong>
           <p>Le hub présente chaque service avec du contenu éditorial propre, puis renvoie vers le sous-domaine applicatif correspondant.</p>
         </div>
 
         <div class="signal-grid">
-          <div><span>GAME</span><strong>WanaChess</strong></div>
-          <div><span>RADIO</span><strong>WanaFM</strong></div>
-          <div><span>OPS</span><strong>WanaBoard</strong></div>
-          <div><span>API</span><strong>Public widgets</strong></div>
+          <div><span><i class="fa-solid fa-chess-knight"></i> GAME</span><strong>WanaChess</strong></div>
+          <div><span><i class="fa-solid fa-radio"></i> RADIO</span><strong>WanaFM</strong></div>
+          <div><span><i class="fa-solid fa-table-columns"></i> OPS</span><strong>WanaBoard</strong></div>
+          <div><span><i class="fa-solid fa-code"></i> API</span><strong>Public widgets</strong></div>
         </div>
       </aside>
     </section>
 
     <section class="ecosystem-strip" id="projects">
       <div class="section-title compact">
-        <span>ÉCOSYSTÈME</span>
+        <span><i class="fa-solid fa-layer-group"></i> ÉCOSYSTÈME</span>
         <h2>Des produits séparés, une identité commune.</h2>
       </div>
 
       <div class="product-lanes">
         <a class="product-lane" href="https://wanachess.wanalike.com" target="_blank">
           <small>01 / Game</small>
-          <strong>WanaChess</strong>
+          <strong><i class="fa-solid fa-chess-board"></i> WanaChess</strong>
           <p>Jeu web, IA, WanaCoach, Discord Activity et couche temps réel IRC/WebSocket.</p>
           <em>/wanachess → wanachess.wanalike.com</em>
         </a>
 
         <a class="product-lane featured" href="https://fm.wanalike.com" target="_blank">
           <small>02 / Radio</small>
-          <strong>WanaFM</strong>
+          <strong><i class="fa-solid fa-tower-broadcast"></i> WanaFM</strong>
           <p>Radio live, automation, bots et futures statistiques multi-plateformes.</p>
           <em>/fm → fm.wanalike.com</em>
         </a>
 
         <a class="product-lane" href="https://board.wanalike.com" target="_blank">
           <small>03 / Board</small>
-          <strong>WanaBoard</strong>
+          <strong><i class="fa-solid fa-diagram-project"></i> WanaBoard</strong>
           <p>Organisation, roadmap, post-it board et suivi produit de l’écosystème.</p>
           <em>/board → board.wanalike.com</em>
         </a>
@@ -68,7 +79,7 @@ const routes = {
 
     <section class="section editorial-section">
       <div class="editorial-copy">
-        <span>IDENTITÉ</span>
+        <span><i class="fa-solid fa-fingerprint"></i> IDENTITÉ</span>
         <h2>Pas une collection de sites. Une base produit.</h2>
       </div>
 
@@ -86,13 +97,13 @@ const routes = {
   projects: `
     <section class="section section-page fade-in">
       <div class="section-title">
-        <span>PROJETS</span>
+        <span><i class="fa-solid fa-layer-group"></i> PROJETS</span>
         <h2>Cartographie WanaLike</h2>
       </div>
       <div class="product-lanes vertical">
-        <a class="product-lane" href="https://wanachess.wanalike.com" target="_blank"><small>GAME</small><strong>WanaChess</strong><p>Jeu web temps réel et IA.</p></a>
-        <a class="product-lane" href="https://fm.wanalike.com" target="_blank"><small>RADIO</small><strong>WanaFM</strong><p>Streaming, bots et automation.</p></a>
-        <a class="product-lane" href="https://board.wanalike.com" target="_blank"><small>OPS</small><strong>WanaBoard</strong><p>Roadmap et organisation.</p></a>
+        <a class="product-lane" href="https://wanachess.wanalike.com" target="_blank"><small>GAME</small><strong><i class="fa-solid fa-chess-knight"></i> WanaChess</strong><p>Jeu web temps réel et IA.</p></a>
+        <a class="product-lane" href="https://fm.wanalike.com" target="_blank"><small>RADIO</small><strong><i class="fa-solid fa-radio"></i> WanaFM</strong><p>Streaming, bots et automation.</p></a>
+        <a class="product-lane" href="https://board.wanalike.com" target="_blank"><small>OPS</small><strong><i class="fa-solid fa-table-columns"></i> WanaBoard</strong><p>Roadmap et organisation.</p></a>
       </div>
     </section>
   `,
@@ -100,7 +111,7 @@ const routes = {
   stack: `
     <section class="section section-page fade-in">
       <div class="section-title">
-        <span>STACK</span>
+        <span><i class="fa-solid fa-server"></i> STACK</span>
         <h2>Infra, web, temps réel.</h2>
       </div>
       <div class="stack-grid">
@@ -120,13 +131,13 @@ function renderNavbar() {
         </a>
 
         <div class="nav-links">
-          <a href="#home">Accueil</a>
-          <a href="#projects">Écosystème</a>
-          <a href="#stack">Stack</a>
-          <a href="https://github.com/wanalike" target="_blank">GitHub</a>
+          <a href="#home"><i class="fa-solid fa-house"></i> Accueil</a>
+          <a href="#projects"><i class="fa-solid fa-layer-group"></i> Écosystème</a>
+          <a href="#stack"><i class="fa-solid fa-server"></i> Stack</a>
+          <a href="https://github.com/wanalike" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
         </div>
 
-        <a class="nav-cta" href="#projects">Explorer</a>
+        <a class="nav-cta" href="#projects"><i class="fa-solid fa-compass"></i> Explorer</a>
       </nav>
     </header>
   `;
@@ -144,9 +155,9 @@ function renderFooter() {
         <p class="footer-intro">Hub central pour apps web, IA, outils communautaires, contenus, radio, jeux et expériences interactives.</p>
 
         <div class="footer-columns">
-          <div><strong>Navigation</strong><a href="#home">Accueil</a><a href="#projects">Écosystème</a><a href="#stack">Stack</a></div>
-          <div><strong>Apps</strong><a href="https://wanachess.wanalike.com" target="_blank">WanaChess</a><a href="https://fm.wanalike.com" target="_blank">WanaFM</a><a href="https://board.wanalike.com" target="_blank">WanaBoard</a></div>
-          <div><strong>Réseau</strong><a href="https://github.com/wanalike" target="_blank">GitHub</a><a href="https://wanalike.com" target="_blank">WanaLike.com</a></div>
+          <div><strong><i class="fa-solid fa-compass"></i> Navigation</strong><a href="#home">Accueil</a><a href="#projects">Écosystème</a><a href="#stack">Stack</a></div>
+          <div><strong><i class="fa-solid fa-cubes"></i> Apps</strong><a href="https://wanachess.wanalike.com" target="_blank">WanaChess</a><a href="https://fm.wanalike.com" target="_blank">WanaFM</a><a href="https://board.wanalike.com" target="_blank">WanaBoard</a></div>
+          <div><strong><i class="fa-solid fa-network-wired"></i> Réseau</strong><a href="https://github.com/wanalike" target="_blank">GitHub</a><a href="https://wanalike.com" target="_blank">WanaLike.com</a><a href="https://wanalike.net/contact" target="_blank">Contact</a></div>
         </div>
 
         <div class="footer-bottom">© 2025-2026 WanaLike — Hub de l’écosystème WanaLike.</div>
@@ -165,9 +176,23 @@ function renderRoute() {
   }, 80);
 }
 
+function bindMotion() {
+  const $cursor = $('.cursor-glow');
+  $(window).on('mousemove', function(event) {
+    $cursor.css({ transform: `translate(${event.clientX - 180}px, ${event.clientY - 180}px)` });
+  });
+
+  $(document).on('mouseenter', '.product-lane, .btn, .nav-cta', function() {
+    $(this).addClass('is-hovered');
+  }).on('mouseleave', '.product-lane, .btn, .nav-cta', function() {
+    $(this).removeClass('is-hovered');
+  });
+}
+
 window.addEventListener('hashchange', renderRoute);
 window.addEventListener('DOMContentLoaded', () => {
   renderNavbar();
   renderFooter();
   renderRoute();
+  bindMotion();
 });
