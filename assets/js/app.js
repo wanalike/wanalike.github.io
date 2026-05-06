@@ -111,7 +111,7 @@ function renderNavbar() {
     <header class="topbar glass-nav">
       <nav class="navbar">
         <a class="brand" href="#home">
-          <div class="brand-dot"></div>
+          <img class="brand-logo" src="assets/img/logo-wanalike.svg" alt="WanaLike logo" />
           <span>WanaLike</span>
         </a>
 
@@ -129,9 +129,13 @@ function renderNavbar() {
 function renderFooter() {
   document.getElementById('footer-root').innerHTML = `
     <footer class="site-footer glass-footer">
-      <div>
-        <h3>WanaLike</h3>
-        <p>Realtime autonomous ecosystem.</p>
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/img/logo-wanalike.svg" alt="WanaLike logo" />
+
+        <div>
+          <h3>WanaLike</h3>
+          <p>Realtime autonomous ecosystem.</p>
+        </div>
       </div>
 
       <div class="footer-links">
