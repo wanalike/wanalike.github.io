@@ -1,9 +1,11 @@
+const CDN_LOGO = 'https://cdn.wanalike.com/assets/v1/brands/wanalike/logo/logo-wanalike.webp';
+
 const routes = {
   home: `
     <section class="hero hero-home">
       <div class="hero-copy fade-in">
         <div class="hero-logo-mark">
-          <img src="assets/img/logo-wanalike.svg" alt="WanaLike logo" />
+          <img src="${CDN_LOGO}" alt="WanaLike logo" />
           <span>Creative Tech Ecosystem</span>
         </div>
 
@@ -27,7 +29,7 @@ const routes = {
 
       <aside class="hero-panel fade-in">
         <div class="hero-orbit-logo">
-          <img src="assets/img/logo-wanalike.svg" alt="WanaLike logo" />
+          <img src="${CDN_LOGO}" alt="WanaLike logo" />
           <div class="orbit-ring ring-one"></div>
           <div class="orbit-ring ring-two"></div>
         </div>
@@ -126,7 +128,7 @@ function renderNavbar() {
     <header class="topbar">
       <nav class="navbar">
         <a class="brand" href="#home">
-          <img class="brand-logo" src="assets/img/logo-wanalike.svg" alt="WanaLike logo" />
+          <img class="brand-logo" src="${CDN_LOGO}" alt="WanaLike logo" />
           <span>WanaLike</span>
         </a>
 
@@ -148,7 +150,7 @@ function renderFooter() {
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-head">
-          <img class="footer-logo" src="assets/img/logo-wanalike.svg" alt="WanaLike logo" />
+          <img class="footer-logo" src="${CDN_LOGO}" alt="WanaLike logo" />
           <div><h3>WanaLike</h3><p>Creative Tech Ecosystem</p></div>
         </div>
 
