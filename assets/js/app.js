@@ -3,7 +3,7 @@ const CDN_LOGO = 'https://cdn.wanalike.com/assets/v1/brands/wanalike/logo/logo-w
 const routes = {
   home: `
     <section class="hero hero-home">
-      <div class="hero-copy fade-in">
+      <div class="hero-copy fade-in reveal-block">
         <div class="hero-logo-mark">
           <img src="${CDN_LOGO}" alt="WanaLike logo" />
           <span>Creative Tech Ecosystem</span>
@@ -27,7 +27,7 @@ const routes = {
         </div>
       </div>
 
-      <aside class="hero-panel fade-in">
+      <aside class="hero-panel fade-in reveal-block">
         <div class="hero-orbit-logo">
           <img src="${CDN_LOGO}" alt="WanaLike logo" />
           <div class="orbit-ring ring-one"></div>
@@ -49,13 +49,28 @@ const routes = {
       </aside>
     </section>
 
+    <section class="network-console reveal-block">
+      <div class="console-head">
+        <span><i class="fa-solid fa-terminal"></i> REALTIME CONTROL LAYER</span>
+        <div><i></i><i></i><i></i></div>
+      </div>
+      <div class="console-body">
+        <pre><code><span>$</span> boot wanalike-hub --mode=public
+<span>✓</span> routes mounted: /wanachess /fm /board /api
+<span>✓</span> realtime layer: irc.websocket.gateway
+<span>✓</span> ui signature: wanalike.motion.v1
+<span>✓</span> shared assets: cdn.wanalike.com/assets/v1
+<span>→</span> status: ecosystem online</code></pre>
+      </div>
+    </section>
+
     <section class="ecosystem-strip" id="projects">
-      <div class="section-title compact">
+      <div class="section-title compact reveal-block">
         <span><i class="fa-solid fa-layer-group"></i> ÉCOSYSTÈME</span>
         <h2>Des produits séparés, une identité commune.</h2>
       </div>
 
-      <div class="product-lanes">
+      <div class="product-lanes reveal-block">
         <a class="product-lane" href="https://wanachess.wanalike.com" target="_blank">
           <small>01 / Game</small>
           <strong><i class="fa-solid fa-chess-board"></i> WanaChess</strong>
@@ -79,7 +94,7 @@ const routes = {
       </div>
     </section>
 
-    <section class="section editorial-section">
+    <section class="section editorial-section reveal-block">
       <div class="editorial-copy">
         <span><i class="fa-solid fa-fingerprint"></i> IDENTITÉ</span>
         <h2>Pas une collection de sites. Une base produit.</h2>
@@ -98,11 +113,11 @@ const routes = {
 
   projects: `
     <section class="section section-page fade-in">
-      <div class="section-title">
+      <div class="section-title reveal-block">
         <span><i class="fa-solid fa-layer-group"></i> PROJETS</span>
         <h2>Cartographie WanaLike</h2>
       </div>
-      <div class="product-lanes vertical">
+      <div class="product-lanes vertical reveal-block">
         <a class="product-lane" href="https://wanachess.wanalike.com" target="_blank"><small>GAME</small><strong><i class="fa-solid fa-chess-knight"></i> WanaChess</strong><p>Jeu web temps réel et IA.</p></a>
         <a class="product-lane" href="https://fm.wanalike.com" target="_blank"><small>RADIO</small><strong><i class="fa-solid fa-radio"></i> WanaFM</strong><p>Streaming, bots et automation.</p></a>
         <a class="product-lane" href="https://board.wanalike.com" target="_blank"><small>OPS</small><strong><i class="fa-solid fa-table-columns"></i> WanaBoard</strong><p>Roadmap et organisation.</p></a>
@@ -112,11 +127,11 @@ const routes = {
 
   stack: `
     <section class="section section-page fade-in">
-      <div class="section-title">
+      <div class="section-title reveal-block">
         <span><i class="fa-solid fa-server"></i> STACK</span>
         <h2>Infra, web, temps réel.</h2>
       </div>
-      <div class="stack-grid">
+      <div class="stack-grid reveal-block">
         <span>PHP</span><span>Python</span><span>Vue.js</span><span>Node.js</span><span>Linux</span><span>WebSockets</span><span>IRC</span><span>NGINX</span><span>AI Systems</span>
       </div>
     </section>
@@ -149,6 +164,11 @@ function renderFooter() {
   document.getElementById('footer-root').innerHTML = `
     <footer class="site-footer">
       <div class="footer-inner">
+        <div class="footer-topline">
+          <span>WanaLike Network</span>
+          <span>Realtime • Radio • AI • Web • Community</span>
+        </div>
+
         <div class="footer-head">
           <img class="footer-logo" src="${CDN_LOGO}" alt="WanaLike logo" />
           <div><h3>WanaLike</h3><p>Creative Tech Ecosystem</p></div>
@@ -175,6 +195,7 @@ function renderRoute() {
   setTimeout(() => {
     app.innerHTML = routes[hash] || routes.home;
     app.classList.add('page-visible');
+    bindReveal();
   }, 80);
 }
 
@@ -184,11 +205,29 @@ function bindMotion() {
     $cursor.css({ transform: `translate(${event.clientX - 180}px, ${event.clientY - 180}px)` });
   });
 
+  $(window).on('scroll', function() {
+    $('.topbar').toggleClass('is-scrolled', window.scrollY > 24);
+  });
+
   $(document).on('mouseenter', '.product-lane, .btn, .nav-cta', function() {
     $(this).addClass('is-hovered');
   }).on('mouseleave', '.product-lane, .btn, .nav-cta', function() {
     $(this).removeClass('is-hovered');
   });
+}
+
+function bindReveal() {
+  const blocks = document.querySelectorAll('.reveal-block');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  blocks.forEach((block) => observer.observe(block));
 }
 
 window.addEventListener('hashchange', renderRoute);
