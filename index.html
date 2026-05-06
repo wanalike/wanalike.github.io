@@ -4,159 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WanaLike Ecosystem</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="WanaLike builds realtime platforms, AI systems, streaming infrastructure and collaborative technologies." />
+  <meta name="theme-color" content="#070b16" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="background-grid"></div>
+  <div class="noise-layer"></div>
+  <div class="glow glow-left"></div>
+  <div class="glow glow-right"></div>
 
-<div class="background-grid"></div>
-<div class="glow glow-left"></div>
-<div class="glow glow-right"></div>
+  <div id="navbar-root"></div>
 
-<header class="hero">
-  <nav class="navbar">
-    <div class="logo">WanaLike</div>
+  <main id="app" class="app-shell" aria-live="polite">
+    <section class="page-loader">
+      <div class="loader-orb"></div>
+      <span>Booting WanaLike ecosystem…</span>
+    </section>
+  </main>
 
-    <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#stack">Stack</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="https://github.com/wanalike" target="_blank">GitHub</a>
-    </div>
-  </nav>
+  <div id="footer-root"></div>
 
-  <div class="hero-content">
-    <span class="badge">Realtime • AI • Infrastructure • Ecosystem</span>
-
-    <h1>
-      Building the <span>Realtime Web Ecosystem</span>
-    </h1>
-
-    <p>
-      WanaLike develops autonomous realtime platforms, collaborative systems,
-      streaming infrastructure and AI-powered technologies designed for the modern web.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn primary" href="https://github.com/wanalike" target="_blank">Explore GitHub</a>
-      <a class="btn secondary" href="#projects">View Projects</a>
-    </div>
-  </div>
-</header>
-
-<section class="section" id="projects">
-  <div class="section-title">
-    <span>CORE PROJECTS</span>
-    <h2>Realtime Platforms & Systems</h2>
-  </div>
-
-  <div class="project-grid">
-
-    <article class="project-card">
-      <div class="project-top">
-        <div class="status online"></div>
-        <span>Realtime Collaboration</span>
-      </div>
-
-      <h3>WanaBoard</h3>
-      <p>
-        Modern collaborative scrum and task management platform with realtime synchronization.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <div class="project-top">
-        <div class="status online"></div>
-        <span>Gaming Ecosystem</span>
-      </div>
-
-      <h3>WanaChess</h3>
-      <p>
-        Multiplayer chess platform integrating Discord Activity, AI systems and realtime infrastructure.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <div class="project-top">
-        <div class="status beta"></div>
-        <span>Streaming Infrastructure</span>
-      </div>
-
-      <h3>WanaFM</h3>
-      <p>
-        AI-assisted radio ecosystem with automation, metadata control and live streaming systems.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <div class="project-top">
-        <div class="status online"></div>
-        <span>Realtime Networking</span>
-      </div>
-
-      <h3>WanaIRCd</h3>
-      <p>
-        UnrealIRCd-powered infrastructure with WebSocket gateways and realtime communication services.
-      </p>
-    </article>
-
-  </div>
-</section>
-
-<section class="section" id="stack">
-  <div class="section-title">
-    <span>TECH STACK</span>
-    <h2>Infrastructure & Technologies</h2>
-  </div>
-
-  <div class="stack-grid">
-    <span>PHP</span>
-    <span>Python</span>
-    <span>Vue.js</span>
-    <span>Node.js</span>
-    <span>Linux</span>
-    <span>Docker</span>
-    <span>WebSockets</span>
-    <span>IRC</span>
-    <span>NGINX</span>
-    <span>MySQL</span>
-    <span>Redis</span>
-    <span>AI Systems</span>
-  </div>
-</section>
-
-<section class="section" id="roadmap">
-  <div class="section-title">
-    <span>ROADMAP</span>
-    <h2>Ecosystem Evolution</h2>
-  </div>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <span>2025</span>
-      <h3>Realtime Collaboration</h3>
-      <p>Expansion of WanaBoard and collaborative tooling ecosystem.</p>
-    </div>
-
-    <div class="timeline-item">
-      <span>2026</span>
-      <h3>Discord Activity Integration</h3>
-      <p>Native realtime multiplayer experiences integrated directly into Discord.</p>
-    </div>
-
-    <div class="timeline-item">
-      <span>2026+</span>
-      <h3>AI Powered Infrastructure</h3>
-      <p>Unified realtime systems powered by automation and artificial intelligence.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 WanaLike — Realtime Autonomous Ecosystem</p>
-</footer>
-
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>
