@@ -3,6 +3,9 @@ const CDN_LOGO = 'https://cdn.wanalike.com/assets/v1/brands/wanalike/logo/logo-w
 const routes = {
   home: `
     <section class="hero hero-home">
+      <div class="data-path path-a"></div>
+      <div class="data-path path-b"></div>
+
       <div class="hero-copy fade-in reveal-block">
         <div class="hero-logo-mark">
           <img src="${CDN_LOGO}" alt="WanaLike logo" />
@@ -61,6 +64,20 @@ const routes = {
 <span>✓</span> ui signature: wanalike.motion.v1
 <span>✓</span> shared assets: cdn.wanalike.com/assets/v1
 <span>→</span> status: ecosystem online</code></pre>
+      </div>
+    </section>
+
+    <section class="live-grid reveal-block">
+      <div class="live-copy">
+        <span><i class="fa-solid fa-satellite-dish"></i> LIVE STATUS</span>
+        <h2>Network center, pas landing page molle.</h2>
+        <p>Le hub doit donner l'impression d'un système vivant : routes, services, flux, signaux et produits reliés.</p>
+      </div>
+      <div class="live-feed">
+        <div><strong>WANACHESS</strong><span>activity bridge</span><em>ONLINE</em></div>
+        <div><strong>WANAFM</strong><span>radio automation</span><em>BUILDING</em></div>
+        <div><strong>WANABOARD</strong><span>product roadmap</span><em>PRIVATE</em></div>
+        <div><strong>CDN</strong><span>shared assets v1</span><em>ONLINE</em></div>
       </div>
     </section>
 
@@ -209,9 +226,9 @@ function bindMotion() {
     $('.topbar').toggleClass('is-scrolled', window.scrollY > 24);
   });
 
-  $(document).on('mouseenter', '.product-lane, .btn, .nav-cta', function() {
+  $(document).on('mouseenter', '.product-lane, .btn, .nav-cta, .live-feed div', function() {
     $(this).addClass('is-hovered');
-  }).on('mouseleave', '.product-lane, .btn, .nav-cta', function() {
+  }).on('mouseleave', '.product-lane, .btn, .nav-cta, .live-feed div', function() {
     $(this).removeClass('is-hovered');
   });
 }
