@@ -1,0 +1,187 @@
+/*
+ * Hardcoded by KoS_ — WanaLike Creative Tech Ecosystem
+ * Copyright © 2025-2026 KoS_ / WanaLike. All rights reserved.
+ */
+
+.projects-page{
+  padding-bottom:140px;
+}
+
+.projects-command-center{
+  width:min(1180px,86vw);
+  margin:0 auto 80px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:1px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.projects-command-copy,
+.projects-status-board{
+  background:#07111f;
+  padding:42px;
+}
+
+.projects-command-copy span{
+  color:#7dd3fc;
+  letter-spacing:2px;
+  font-size:.78rem;
+}
+
+.projects-command-copy h3{
+  font-size:clamp(2rem,4vw,3.7rem);
+  line-height:1.02;
+  margin:18px 0;
+}
+
+.projects-command-copy p{
+  color:rgba(255,255,255,.66);
+  line-height:1.9;
+}
+
+.projects-status-board{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  padding:1px;
+}
+
+.projects-status-board div{
+  background:#0a172a;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  min-height:160px;
+}
+
+.projects-status-board strong{
+  font-size:3rem;
+  color:#fff;
+}
+
+.projects-status-board em{
+  font-style:normal;
+  color:#7dd3fc;
+  letter-spacing:1px;
+}
+
+.project-showcase{
+  width:min(1180px,86vw);
+  margin:0 auto 90px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.project-feature{
+  min-height:340px;
+  background:linear-gradient(180deg,#07111f,#091528);
+  padding:42px;
+  text-decoration:none;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  transition:.3s ease;
+}
+
+.project-feature:hover{
+  transform:translateY(-6px);
+  box-shadow:0 35px 90px rgba(0,162,255,.14);
+}
+
+.project-feature i{
+  font-size:3rem;
+  margin:26px 0;
+  color:#7dd3fc;
+}
+
+.project-feature small{
+  color:#7dd3fc;
+  letter-spacing:2px;
+}
+
+.project-feature h3{
+  font-size:2.6rem;
+  margin-bottom:18px;
+}
+
+.project-feature p{
+  color:rgba(255,255,255,.66);
+  line-height:1.9;
+  max-width:520px;
+}
+
+.project-feature span{
+  position:absolute;
+  left:42px;
+  bottom:38px;
+  color:#9bdcff;
+}
+
+.project-chess:before,
+.project-radio:before,
+.project-board:before,
+.project-cdn:before{
+  content:'';
+  position:absolute;
+  inset:auto -120px -120px auto;
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  opacity:.18;
+}
+
+.project-chess:before{background:#00a2ff}
+.project-radio:before{background:#d946ef}
+.project-board:before{background:#7c5cff}
+.project-cdn:before{background:#34f5a2}
+
+.projects-roadmap{
+  width:min(1180px,86vw);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.projects-roadmap div{
+  background:#07111f;
+  padding:34px;
+}
+
+.projects-roadmap span{
+  color:#7dd3fc;
+  letter-spacing:2px;
+  font-size:.75rem;
+}
+
+.projects-roadmap strong{
+  display:block;
+  margin:14px 0;
+  font-size:1.8rem;
+}
+
+.projects-roadmap em{
+  font-style:normal;
+  color:rgba(255,255,255,.62);
+  line-height:1.8;
+}
+
+@media(max-width:900px){
+  .projects-command-center,
+  .project-showcase,
+  .projects-roadmap{
+    width:calc(100% - 48px);
+    grid-template-columns:1fr;
+  }
+
+  .project-feature{
+    min-height:280px;
+  }
+}
