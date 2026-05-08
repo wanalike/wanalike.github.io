@@ -1,0 +1,142 @@
+/*
+ * Hardcoded by KoS_ — WanaLike Creative Tech Ecosystem
+ * Copyright © 2025-2026 KoS_ / WanaLike. All rights reserved.
+ * Source signature: please do not copy, clone or reuse this code without permission.
+ */
+
+.living-network{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:-1;
+}
+
+.living-network span{
+  position:absolute;
+  display:block;
+  height:1px;
+  width:38vw;
+  opacity:.22;
+  background:linear-gradient(90deg,transparent,rgba(0,162,255,.85),transparent);
+  box-shadow:0 0 18px rgba(0,162,255,.42);
+  animation:livingLine 8s linear infinite;
+}
+
+.living-network span:nth-child(1){left:-12vw;top:24%;animation-delay:0s}
+.living-network span:nth-child(2){right:-10vw;top:48%;animation-delay:2.4s;background:linear-gradient(90deg,transparent,rgba(124,92,255,.78),transparent)}
+.living-network span:nth-child(3){left:18vw;bottom:18%;animation-delay:4.8s;width:28vw}
+
+@keyframes livingLine{
+  0%{transform:translateX(-18vw) scaleX(.65);opacity:0}
+  18%{opacity:.35}
+  52%{opacity:.22}
+  100%{transform:translateX(118vw) scaleX(1.15);opacity:0}
+}
+
+.app-shell{
+  transition:opacity .28s ease, transform .28s ease, filter .28s ease;
+}
+
+.app-shell:not(.page-visible){
+  opacity:.35;
+  transform:translateY(10px);
+  filter:blur(4px);
+}
+
+.magnetic-ready{
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+
+.magnetic-ready:after{
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:0;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.16),transparent 34%);
+  transition:opacity .22s ease;
+}
+
+.magnetic-ready:hover:after{
+  opacity:1;
+}
+
+.project-feature,
+.product-lane,
+.stack-columns article,
+.live-feed div,
+.blueprint-list div,
+.projects-status-board div,
+.ecosystem-route-list div,
+.ecosystem-flow div{
+  isolation:isolate;
+}
+
+.project-feature:hover,
+.product-lane:hover,
+.stack-columns article:hover{
+  border-color:rgba(0,162,255,.28);
+}
+
+.telemetry-graph svg,
+.topology-map,
+.network-console,
+.stack-terminal{
+  position:relative;
+}
+
+.telemetry-graph svg:after,
+.topology-map:after{
+  animation-duration:4s!important;
+}
+
+.metric{
+  text-shadow:0 0 18px rgba(0,162,255,.28);
+}
+
+.metric.is-ticking{
+  animation:metricTick .35s ease;
+}
+
+@keyframes metricTick{
+  0%{transform:translateY(0);filter:brightness(1)}
+  45%{transform:translateY(-2px);filter:brightness(1.6)}
+  100%{transform:translateY(0);filter:brightness(1)}
+}
+
+.daemon-feed div{
+  animation:daemonIn .32s ease both;
+}
+
+@keyframes daemonIn{
+  from{opacity:0;transform:translateY(-6px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.radar-sweep{
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  border:1px solid rgba(0,162,255,.12);
+  background:conic-gradient(from 90deg,rgba(0,162,255,.28),transparent 26%,transparent);
+  filter:blur(.2px);
+  opacity:.36;
+  pointer-events:none;
+  animation:radarSpin 5.5s linear infinite;
+}
+
+@keyframes radarSpin{
+  to{transform:rotate(360deg)}
+}
+
+.topology-map .radar-sweep{
+  left:50%;top:50%;margin-left:-110px;margin-top:-110px;
+}
+
+@media(max-width:900px){
+  .living-network span{width:80vw}
+  .magnetic-ready{transform:none!important}
+}
